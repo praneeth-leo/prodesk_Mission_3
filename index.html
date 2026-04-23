@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">GitHub User Search</p>
+      <h1>Discover developers with a premium, glassmorphism interface.</h1>
+      <p class="hero-copy">
+        Search any GitHub username to instantly explore profile details and the latest repositories.
+      </p>
+    </section>
+
+    <section class="glass-panel">
+      <form class="search-form" id="searchForm" novalidate>
+        <label class="search-label" for="search">Enter a GitHub username</label>
+        <div class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+            <path d="M10.5 4a6.5 6.5 0 1 0 4.03 11.6l4.43 4.44 1.41-1.42-4.43-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"></path>
+          </svg>
+          <input
+            id="search"
+            name="search"
+            type="text"
+            autocomplete="off"
+            placeholder="Search @octocat"
+            aria-describedby="statusMessage"
+          >
+        </div>
+      </form>
+
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite">
+        Start by searching for a GitHub username.
+      </p>
+
+      <section id="profile" class="profile-slot"></section>
+      <section id="repos" class="repos-slot"></section>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
